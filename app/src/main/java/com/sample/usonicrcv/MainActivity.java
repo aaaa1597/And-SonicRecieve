@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MainActivity extends AppCompatActivity {
-	private static final int SAMPLING_FREQ = 44100;
+	private static final int SAMPLING_FREQ = 48000;
 	private static final short THRESHOLD_AMP = 0x00ff;
 
 	private AudioRecord		mAudioRecord = null;
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 				index = i;
 			}
 		}
-		// 要素番号・サンプリングレート・FFT サイズからピーク周波数を求める
+		/* 要素番号・サンプリングレート・FFT サイズからピーク周波数を求める */
 		return index * SAMPLING_FREQ / data.length;
 	}
 
